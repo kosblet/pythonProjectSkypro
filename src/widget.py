@@ -10,7 +10,7 @@ def mask_account_card(card_info: str) -> str:
 
     prefix = card_info[
         :index
-    ].strip()  # Убираем лишние пробелы в начале и конце префикса
+    ].strip()  # Убираем лишние пробелы в начале и конце префикса for push
     if prefix == "Счет":
         return f"{prefix} {masks.get_mask_account(card_info[index:].strip())}"
     else:

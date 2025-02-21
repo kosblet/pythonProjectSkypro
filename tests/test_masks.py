@@ -4,7 +4,7 @@ from src.masks import get_mask_card_number, get_mask_account
 
 def test_mask_card_number():
     """
-    Тестирование функции маскировки номера карты.
+    Тестирование функции маскировки номера карты. for push
     """
     assert (
         get_mask_card_number("Visa Platinum 7000 7922 8960 6361")

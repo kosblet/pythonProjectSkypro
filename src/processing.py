@@ -9,7 +9,7 @@ def sort_by_date(list_of_dicts: list[Any], sorting_direct: bool = True) -> list[
     return sorted(list_of_dicts, key=lambda x: x.get("date"), reverse=sorting_direct)
 
 
-# Примеры использования функций
+# Примеры использования функций for push
 print(
     filter_by_state(
         [

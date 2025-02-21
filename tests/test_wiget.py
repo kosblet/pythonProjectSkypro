@@ -1,6 +1,6 @@
 import pytest
 from src.widget import get_date, mask_account_card
-
+#for push
 
 def test_convert_date():
     assert get_date("2018-07-11T02:26:18.671407") == "11.07.2018"
