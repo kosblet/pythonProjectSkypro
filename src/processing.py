@@ -1,13 +1,8 @@
 from typing import Any
 
 
-#
 def filter_by_state(list_of_dicts: list[Any], state: str = "EXECUTED") -> list[Any]:
-    correct_list = []
-    for num_dict in range(len(list_of_dicts)):
-        if list_of_dicts[num_dict]["state"] == state:
-            correct_list.append(list_of_dicts[num_dict])
-    return correct_list
+    return [item for item in list_of_dicts if item.get("state") == state]
 
 
 def sort_by_date(list_of_dicts: list[Any], sorting_direct: bool = True) -> list[Any]:

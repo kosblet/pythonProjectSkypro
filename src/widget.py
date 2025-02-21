@@ -1,19 +1,20 @@
 from src import masks
 
 
-#
 def mask_account_card(card_info: str) -> str:
-
     index = 0
     for char in card_info:
         if char.isdigit():
             break
         index += 1
 
-    if card_info[:index].strip() == "Счет":
-        return card_info[:index] + " " + masks.get_mask_account(card_info[index:])
+    prefix = card_info[
+        :index
+    ].strip()  # Убираем лишние пробелы в начале и конце префикса
+    if prefix == "Счет":
+        return f"{prefix} {masks.get_mask_account(card_info[index:].strip())}"
     else:
-        return card_info[:index] + " " + masks.get_mask_card_number(card_info[index:])
+        return f"{prefix} {masks.get_mask_card_number(card_info[index:].strip())}"
 
 
 def get_date(date: str) -> str:
