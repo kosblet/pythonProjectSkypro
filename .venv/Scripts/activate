@@ -45,18 +45,18 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='C:\Users\Koss\PycharmProjects\pythonProject2\.venv'
+VIRTUAL_ENV='C:\Users\Koss\PycharmProjects\pythonProjectSkypro\.venv'
 if ([ "$OSTYPE" = "cygwin" ] || [ "$OSTYPE" = "msys" ]) && $(command -v cygpath &> /dev/null) ; then
     VIRTUAL_ENV=$(cygpath -u "$VIRTUAL_ENV")
 fi
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
-PATH="$VIRTUAL_ENV/Scripts:$PATH"
+PATH="$VIRTUAL_ENV/"Scripts":$PATH"
 export PATH
 
-if [ "x" != x ] ; then
-    VIRTUAL_ENV_PROMPT=""
+if [ "x"pythonprojectskypro-py3.13 != x ] ; then
+    VIRTUAL_ENV_PROMPT=pythonprojectskypro-py3.13
 else
     VIRTUAL_ENV_PROMPT=$(basename "$VIRTUAL_ENV")
 fi
@@ -84,4 +84,4 @@ pydoc () {
 # The hash command must be called to get it to forget past
 # commands. Without forgetting past commands the $PATH changes
 # we made may not be respected
-hash -r 2>/dev/null
+hash -r 2>/dev/null || true
