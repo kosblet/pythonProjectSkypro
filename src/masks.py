@@ -8,12 +8,14 @@ def get_mask_card_number(num_card: Union[int, str]) -> str:
     Если есть название карты (например, "Visa Platinum"), оно также сохраняется.
     """
     # Разделяем строку на название карты и номер
-    parts = num_card.rsplit(" ", 4)  # Делим строку справа по последним 4 пробелам
+    # Делим строку справа по последним 4 пробелам
+    parts = num_card.rsplit(" ", 4)
     if len(parts) == 5:
         card_name = " ".join(
             parts[:-4]
         )  # Собираем название карты из всех частей до номера
-        card_number = "".join(parts[-4:]).replace(" ", "")  # Номер карты без пробелов
+        # Номер карты без пробелов
+        card_number = "".join(parts[-4:]).replace(" ", "")
     else:
         card_name = ""
         card_number = num_card.replace(

@@ -58,20 +58,20 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\Koss\PycharmProjects\pythonProject2\.venv'
+set -gx VIRTUAL_ENV 'C:\Users\Koss\PycharmProjects\pythonProjectSkypro\.venv'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
-   set -gx _OLD_VIRTUAL_PATH (_bashify_path $PATH)
+    set -gx _OLD_VIRTUAL_PATH (_bashify_path $PATH)
 else
     set -gx _OLD_VIRTUAL_PATH $PATH
 end
-set -gx PATH "$VIRTUAL_ENV"'/Scripts' $PATH
+set -gx PATH "$VIRTUAL_ENV"'/'Scripts $PATH
 
 # Prompt override provided?
 # If not, just use the environment name.
-if test -n ''
-    set -gx VIRTUAL_ENV_PROMPT ''
+if test -n pythonprojectskypro-py3.13
+    set -gx VIRTUAL_ENV_PROMPT pythonprojectskypro-py3.13
 else
     set -gx VIRTUAL_ENV_PROMPT (basename "$VIRTUAL_ENV")
 end

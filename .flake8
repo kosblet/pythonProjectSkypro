@@ -1,0 +1,25 @@
+[flake8]
+max-line-length = 88
+ignore = E501, W503
+exclude =
+    .venv,
+    __pycache__,
+    old/,
+    build/,
+    dist/,
+    .git,
+    .hg,
+    .mypy_cache,
+    .tox,
+    .nox,
+    .svn,
+    .bzr,
+    .eggs,
+    .cache,
+    .pytest_cache,
+    .vscode,
+    .idea,
+    .vscode-test,
+    .github,
+    .coverage,
+    .coverage.*
